@@ -1,0 +1,220 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=10976, tid=12912
+#
+# JRE version:  (21.0.2+13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0.2+13-LTS-58, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=windows-1252 -Duser.country=419 -Duser.language=es -Duser.variant com.devs4j.lombokspring.LombokSpringApplication
+
+Host: Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz, 4 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+Time: Thu May  2 14:50:58 2024 Hora est. Pacífico, Sudamérica elapsed time: 0.032808 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002334d891510):  JavaThread "Unknown thread" [_thread_in_vm, id=12912, stack(0x000000b088800000,0x000000b088900000) (1024K)]
+
+Stack: [0x000000b088800000,0x000000b088900000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6cade9]
+V  [jvm.dll+0x8569c1]
+V  [jvm.dll+0x858d2e]
+V  [jvm.dll+0x859413]
+V  [jvm.dll+0x280e56]
+V  [jvm.dll+0xbeb17]
+V  [jvm.dll+0x3273b5]
+V  [jvm.dll+0x81ef6d]
+V  [jvm.dll+0x3bba01]
+V  [jvm.dll+0x807928]
+V  [jvm.dll+0x44f50e]
+V  [jvm.dll+0x450e11]
+C  [jli.dll+0x52a3]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17344]
+C  [ntdll.dll+0x526b1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffb0d51bb88, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+
+=>0x000002334d891510 (exited) JavaThread "Unknown thread"    [_thread_in_vm, id=12912, stack(0x000000b088800000,0x000000b088900000) (1024K)]
+Total: 1
+
+Threads with active compile tasks:
+Total: 0
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.014 Loaded shared library C:\Program Files\Java\jdk-21\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff65b270000 - 0x00007ff65b280000 	C:\Program Files\Java\jdk-21\bin\java.exe
+0x00007ffb31f10000 - 0x00007ffb32108000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffb2ff40000 - 0x00007ffb2fffd000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffb2f6b0000 - 0x00007ffb2f9a6000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffb2fe40000 - 0x00007ffb2ff40000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffb21f90000 - 0x00007ffb21fa9000 	C:\Program Files\Java\jdk-21\bin\jli.dll
+0x00007ffb21fb0000 - 0x00007ffb21fcb000 	C:\Program Files\Java\jdk-21\bin\VCRUNTIME140.dll
+0x00007ffb30560000 - 0x00007ffb30610000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffb30000000 - 0x00007ffb3009e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffb30310000 - 0x00007ffb303b0000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffb30100000 - 0x00007ffb30223000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffb2f9b0000 - 0x00007ffb2f9d7000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffb31120000 - 0x00007ffb312bf000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffb1a6a0000 - 0x00007ffb1a93a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5\COMCTL32.dll
+0x00007ffb302e0000 - 0x00007ffb3030b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffb2f680000 - 0x00007ffb2f6a2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffb2fb40000 - 0x00007ffb2fc57000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffb2fc60000 - 0x00007ffb2fcfd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffb22580000 - 0x00007ffb2258a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffb30840000 - 0x00007ffb30872000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffb2af60000 - 0x00007ffb2af6c000 	C:\Program Files\Java\jdk-21\bin\vcruntime140_1.dll
+0x00007ffb21f00000 - 0x00007ffb21f8e000 	C:\Program Files\Java\jdk-21\bin\msvcp140.dll
+0x00007ffb0c950000 - 0x00007ffb0d667000 	C:\Program Files\Java\jdk-21\bin\server\jvm.dll
+0x00007ffb30890000 - 0x00007ffb308fb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffb1b830000 - 0x00007ffb1b857000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffb2f420000 - 0x00007ffb2f46b000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ffb2f400000 - 0x00007ffb2f412000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffb2d450000 - 0x00007ffb2d462000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffb28ca0000 - 0x00007ffb28caa000 	C:\Program Files\Java\jdk-21\bin\jimage.dll
+0x00007ffb1d810000 - 0x00007ffb1d9f4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffb1d7a0000 - 0x00007ffb1d7d4000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffb2fd00000 - 0x00007ffb2fd82000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffb21ee0000 - 0x00007ffb21eff000 	C:\Program Files\Java\jdk-21\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5;C:\Program Files\Java\jdk-21\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=windows-1252 -Duser.country=419 -Duser.language=es -Duser.variant 
+java_command: com.devs4j.lombokspring.LombokSpringApplication
+java_class_path (initial): C:\Users\Richa\OneDrive\Documents\Lombok\lombok-spring\build\classes\java\main;C:\Users\Richa\OneDrive\Documents\Lombok\lombok-spring\build\resources\main;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\3.2.5\a9837a876129cc6fe5f3abf1de5ec0a16faaf003\spring-boot-starter-3.2.5.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\3.2.5\6385a2c00a03edb896b2833e4bdee2ae53cd69b8\spring-boot-autoconfigure-3.2.5.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\3.2.5\eec72431f6f56a50c9919129665ba3359ca02104\spring-boot-3.2.5.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-logging\3.2.5\28cf3a346da7bb624381ccc21d7a27500181de63\spring-boot-starter-logging-3.2.5.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\jakarta.annotation\jakarta.annotation-api\2.1.1\48b9bda22b091b1f48b13af03fe36db3be6e1ae3\jakarta.annotation-api-2.1.1.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\6.1.6\2be30298638975efaf7fff22f1570d79b2679814\spring-context-6.1.6.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\6.1.6\4958f52cb9fcb3adf7e836304550de5431a9347e\spring-aop-6.1.6.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\6.1.6\332d80ff134420db4ebf7614758e6a02a9bd3c41\spring-beans-6.1.6.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\6.1.6\9c3d7f0e17a919a4ea9f087e4e2140ad39776bc8\spring-expression-6.1.6.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\6.1.6\dea4b8e110b7b54a02a4907e32dbb0adee8a7168\spring-core-6.1.6.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\2.2\3af797a25458550a16bf89acc8e4ab2b7f2bfce0\snakeyaml-2.2.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-classic\1.4.14\d98bc162275134cdf1518774da4a2a17ef6fb94d\logback-classic-1.4.14.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-to-slf4j\2.21.1\d77b2ba81711ed596cd797cc2b5b5bd7409d841c\log4j-to-slf4j-2.21.1.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.slf4j\jul-to-slf4j\2.0.13\a3bcd9d9dd50c71ce69f06b1fd05e40fdeff6ba5\jul-to-slf4j-2.0.13.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jcl\6.1.6\84cb19b30b22feca73c2ac005ca849c5890935a3\spring-jcl-6.1.6.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\io.micrometer\micrometer-observation\1.12.5\ee23704259a1aad5c8f503db4d37cdfe5352e766\micrometer-observation-1.12.5.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-core\1.4.14\4d3c2248219ac0effeb380ed4c5280a80bf395e8\logback-core-1.4.14.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\2.0.13\80229737f704b121a318bba5d5deacbcf395bc77\slf4j-api-2.0.13.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.21.1\74c65e87b9ce1694a01524e192d7be989ba70486\log4j-api-2.21.1.jar;C:\Users\Richa\.gradle\caches\modules-2\files-2.1\io.micrometer\micrometer-commons\1.12.5\da45afd81a6a05267df5ddfe10438ea857e0f7d9\micrometer-commons-1.12.5.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 65011712                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1040187392                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 1040187392                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Gradle\gradle-8.6-bin\gradle-8.6\bin;C:\Users\Richa\AppData\Local\Microsoft\WindowsApps;;C:\Users\Richa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Richa\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.5\bin;
+USERNAME=Richa
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+TMP=C:\Users\Richa\AppData\Local\Temp
+TEMP=C:\Users\Richa\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+OS uptime: 0 days 3:04 hours
+
+CPU: total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 9 microcode 0xb4, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt, rdtscp, f16c
+Processor Information for all 4 processors :
+  Max Mhz: 2712, Current Mhz: 2511, Mhz Limit: 2495
+
+Memory: 4k page, system-wide physical 3964M (210M free)
+TotalPageFile size 16252M (AvailPageFile size 13M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 11M, peak: 12M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0.2+13-LTS-58) for windows-amd64 JRE (21.0.2+13-LTS-58), built on 2024-01-05T18:32:24Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
